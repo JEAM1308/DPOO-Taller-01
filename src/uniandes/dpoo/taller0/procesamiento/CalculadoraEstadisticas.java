@@ -132,16 +132,16 @@ public class CalculadoraEstadisticas
 	 *         Si no se encuentra el país con el nombre indicado, se retorna null.
 	 */
 	public List<Map<String, Object>> atletasPorPais(String nombrePais)
-	{
+		{
 		List<Map<String, Object>> resultado = null;
 		Pais elPais = buscarPais(nombrePais);
 		if (elPais != null)
-		{
+			{
 			resultado = new ArrayList<Map<String, Object>>();
 			resultado = elPais.consultarAtletas();
-		}
+			}
 		return resultado;
-	}
+		}
 
 	/**
 	 * Calcula cuál es el país con más medallistas en los juegos olímpicos. Si hay
@@ -350,6 +350,7 @@ public class CalculadoraEstadisticas
 		return todoterreno;
 	}
 
+
 	/**
 	 * Consulta cuáles han sido los medallistas de un determinado país y de un
 	 * determinado género.
@@ -443,5 +444,22 @@ public class CalculadoraEstadisticas
 
 		return nombres;
 	}
-
+	
+	
+public String buscarPaisAtleta(String nombreBuscado)
+	{
+	Pais paisAtleta = null;
+	String nombre_pais = null;
+	for (Atleta unAtleta : atletas)
+		{
+		String nombreAtleta = unAtleta.darNombre();		
+		if (nombreAtleta.equals(nombreBuscado))
+			{
+			paisAtleta = unAtleta.darPais();
+			nombre_pais = paisAtleta.darNombre();
+			}
+		}
+	return nombre_pais;
+	}
+	
 }

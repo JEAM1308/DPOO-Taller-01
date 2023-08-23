@@ -1,6 +1,9 @@
 package uniandes.dpoo.taller0.modificacion;
 
-public class Modificacion {
-	public void main()
-		{System.out.println("Hola, mundo!");}
+public class Modificacion 
+{
+	public static void main()
+	{
+	System.out.println("Hola, mundo!");
+	}
 }

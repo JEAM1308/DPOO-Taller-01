@@ -358,14 +358,14 @@ public class ConsolaOlimpicos
 private void ejecutarPaisdeunAtleta()
 	{
 	System.out.println("\n" + "País de un atleta" + "\n");
-	String nombreBuscado = input("Por favor ingrese el nombre del atleta: ");
+	String nombreBuscado = input("Por favor ingrese el nombre del atleta");
 	
 	String nombrePais = calculadora.buscarPaisAtleta(nombreBuscado);
 	
 	if (nombrePais == null)
 		{System.out.println("No se encontró al atleta");}
 	else
-		{System.out.println("El atleta " + nombreBuscado + " representa a " + nombrePais);}
+		{System.out.println("\n"+"El atleta " + nombreBuscado.toUpperCase() + " representa a " + nombrePais.toUpperCase());}
 	}
 	
 

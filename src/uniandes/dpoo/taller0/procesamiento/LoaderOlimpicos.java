@@ -20,11 +20,12 @@ public class LoaderOlimpicos
 	{
 	public static CalculadoraEstadisticas cargarArchivo(String nombreArchivo) throws FileNotFoundException, IOException
 		{
+		String path = "././././data/";
 		Map<String, Atleta> atletas = new HashMap<>();
 		Map<String, Pais> paises = new HashMap<>();
 		List<Evento> eventos = new ArrayList<>();
 		// Abrir el archivo y leerlo línea por línea usando un BufferedReader
-		BufferedReader br = new BufferedReader(new FileReader(nombreArchivo));
+		BufferedReader br = new BufferedReader(new FileReader(path + nombreArchivo));
 		String linea = br.readLine(); // La primera línea del archivo se ignora porque únicamente tiene los títulos de
 										// las columnas
 		linea = br.readLine();
